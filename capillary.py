@@ -49,46 +49,46 @@ class Capillary:
         self.electro_osmosis_time = electro_osmosis_time
 
 
-    def getDelivedVolume(self):
+    def delivered_volume(self):
         """Add description"""
         return 0.0
 
-    def getCapillaryVolume(self):
+    def capillary_volume(self):
         """Add description"""
         return 0.0
 
-    def getToWindowVolume(self):
+    def to_window_volume(self):
         """Add description"""
         return 0.0
 
-    def getInjectionPlugLength(self):
+    def injection_plug_length(self):
         """Add description"""
         return 0.0
 
-    def getTimeToReplaceVolume(self):
+    def time_to_replace_volume(self):
         """Add description"""
         return 0.0
 
-    def getViscosity(self):
+    def computed_viscosity(self):
         """Add description"""
         return 0.0
 
-    def getConductivity(self):
+    def conductivity(self):
         """Add description"""
         return 0.0
 
-    def getFieldStrength(self):
+    def field_strength(self):
         """Add description"""
         return 0.0
 
-    def getMicroEOF(self):
+    def micro_eof(self):
         """Add description"""
         return 0.0
 
-    def getLengthPerMinute(self):
+    def length_per_minute(self):
         """Add description"""
         return 0.0
 
-    def getFlowRate(self):
+    def flow_rate(self):
         """Add description"""
         return 0.0
