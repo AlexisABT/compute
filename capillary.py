@@ -16,6 +16,8 @@
 """
 capillary - A class describing a capillary used in electrophoresis
 """
+import math
+
 class Capillary:
     def __init__(self, total_length = 100.0, to_window_length = 90.0,
                  diameter = 30.0, pressure = 30.0, duration = 21.0,
@@ -51,38 +53,47 @@ class Capillary:
 
     def delivered_volume(self):
         """Add description"""
-        return 0.0
+        delivered_volume = ((math.pi*(self.diameter**4)*self.pressure*self.duration)/(128*self.viscosity*self.total_length))*(10**12)
+        return delivered_volume
 
     def capillary_volume(self):
         """Add description"""
-        return 0.0
+        capillary_volume = ((math.pi*(self.diameter**2)*self.total_length)/4)*(10**12)
+        return capillary_volume
 
     def to_window_volume(self):
         """Add description"""
-        return 0.0
+        to_window_volume = ((math.pi*(self.diameter**2)*self.to_window_length)/4)*(10**12)
+        return to_window_volume
 
     def injection_plug_length(self):
         """Add description"""
-        return 0.0
+        injection_plug_length = ((math.pi*(self.diameter**2)*self.total_length)/4)*(10**12)
+        return injection_plug_length
 
     def time_to_replace_volume(self):
         """Add description"""
-        return 0.0
+        time_to_replace_volume = ((32*self.viscosity*(self.total_length)**2)/((self.diameter**2)*self.pressure))
+        return time_to_replace_volume
 
     def computed_viscosity(self):
         """Add description"""
-        return 0.0
+        computed_viscosity = ((math.pi*(self.diameter**4)*self.pressure*self.duration)/(32*self.to_window_length*self.total_length))*(10**3)
+        return computed_viscosity
 
     def conductivity(self):
         """Add description"""
-        return 0.0
+        conductivity = ((4*(self.total_length**(-2))*self.to_window_length)/(math.pi*(self.diameter**2)*self.voltage))
+        return conductivity
 
     def field_strength(self):
         """Add description"""
-        return 0.0
+        field_strength = (self.voltage / self.total_length)
+        return field_strength
 
     def micro_eof(self):
         """Add description"""
+        
         return 0.0
 
     def length_per_minute(self):
